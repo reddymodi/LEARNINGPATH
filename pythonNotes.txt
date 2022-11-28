@@ -1,0 +1,1023 @@
+1.python is highlevel language and intrupted language
+2.it is developed by gudio van russam in 1991
+3.why python and advantages of phython
+   1.free and open source
+   2.it is easy learn
+   3.extension to .py
+   4.it will take lessline of code for functionality.reduce in developemnt time
+   5.morthen 1.5 lack packages and 1crore modules
+   6.it's portable
+   7.dyanamic programing language
+
+5.Uses of Python
+  develop desktop, mobile application
+  game development
+  web development
+  networking
+  Data Science
+  Automation
+  AI/ ML/ Dl /Big Data
+  Shell Scripting
+
+
+Keywords
+-> These are reserved words, to perform specific task
+-> There are 35 Keywords
+
+False                class               from                or
+None                continue           global            pass
+True                 def                    if                   raise
+and                  del                    import             return
+as                    elif                     in                   try
+assert              else                   is                   while
+async               except              lambda           with
+await               finally                nonlocal          yield
+break               for                    not
+
+Identifiers
+—------------
+these are the names which are used to identify the variables , function name, classname, obj name, etc..
+		 these are the set of rules, which are used to define a variable
+
+	1)variable should not begin with digits, but we can use digits followed by 
+	alphabets      
+	2)we should not use special symbols  except “_”
+	3)we should not use keywords as a variable
+	4)identifiers can be of any length
+	5)these are case sensitive
+	6) no space should be present
+
+Variable:
+—------------
+		it is a reserved memory location, where you can store some values
+
+	to define an variable , we have to take the help of identifiers
+		when we create a var. some space will be reserved in memory
+	based on the datatype the memory is assigned to the var.
+		all the values are stored in heap memory and the references are 
+	stored in stack memory
+		instead of values the address where the value is stored is assigned
+	to the variabele, because if store the values directly inside heap memory,
+	the controller will take more time to execute.
+
+  Syntax : var = value
+  x = 10
+  name = "abc"
+  is_valid = True
+
+  is_valid = False
+  x = 20
+  name = "xyz
+
+   Data Types
+—-------------
+ These are the types of data stored inside variables
+
+These are of 2 types
+--------------------
+1) Single Valued Data types
+2) Collection Data Types
+
+                 		   Data types
+              		  /      	         \
+        Single Valued DT       		   collection DT
+        /                  \          		-----------------
+    Numeric                 Boolean     	    string ("Prabhu", 'name', '10')
+    -----------    		 ---------    	    list ([1, 2, 3])
+    int (10, -1)		    True   	     tuples ((1, 2, 3))
+    float (10.5)  		  False           	     set ({1, 2, 3})
+    complex (2+3j)                  		    dict ({key: value, key2: value2})
+
+
+type() : it is used to check type of variable
+
+integer
+-------
+all the positive and negative whole numbers without decimal points.
+represented as "int"
+
+Ex : 10, 0, -100, -5000, 276
+
+Default value -> 0
+int() : is used check the default value of integer
+
+float
+---------
+it is a positive or negative number with decimal point
+represented as "float"
+
+Ex: 10.55, -500.0, -0.67, 0.0
+
+default value -> 0.0
+float() : used to check default value of float
+
+complex
+-----------
+complex = real + imag
+
+it is combination real and imag no.s
+format : a + bj // if we write J it will internally converted to 'j'
+
+a => real part => a can int or float
+b => imag part => int or float
+
+represented as complex
+
+Ex : 1 + 5j, 5j, 5.0 + 11.4j
+
+Default value : 0j
+complex() : to check default value
+
+
+Boolean
+--------------
+In python Boolean are 2 Keywords \. i.e True , False
+represented "bool"
+
+Ex : True, False
+
+Default value : False
+bool() : to check default value of Boolean
+
+
+
+String: 	
+—--------
+→ It is a collection of n no. of characters enclosed between ' '/ " "/""" """ 	
+→ we can store n no. of characters inside a string, and characters may be of any special symbols or alphabets or numbers. 	
+“A - Z”, “a - z”, “0 - 9”, Special chars (!@#$%^&*()_+{}:”;’[], etc)
+→ string is immutable, means values in a string cannot be changed 		
+→ To skip any character we use escape character(\) 		
+→ string is represented as ‘str’ 	
+→ It is an ordered data type
+
+syntax: 		
+var='val1val2val3......val n' 	
+ex: a='silicon city'
+
+Default Value : “”
+str() -> is used to check default value
+len() -> is used to check length of string
+
+memory management in String DT:
+ 	--> whenever the controller sees the collection DT, it will create a memory layer in the heap memory. 		
+--> it will check the length of the given collection and create that much blocks inside the memory layer 		
+--> then it will store each value inside one block respectively 
+	
+-->indexing/subaddressing: 		
+there are two types of indexing 		
+1)+ve indexing (0 to len(collection)-1)(left to right) 
+		2)-ve indexing (-1 to -len(collection)) (right to left) 		
+
+→ After indexing, the controller will take the address of the whole memory layer and store it in a given variable .
+	-->even if we give -ve indexing, internally it is converted to 	+ve indexing 					 +ve index=len(collection)+(-ve index)
+ 	-->to fetch any value from the given string :	var[index n
+
+→ It is immutable we can't modify the value
+
+
+
+
+List:
+->  It is a collection of homogeneous and heterogeneous DT.
+ 	-> we can store n no. of values in the list of any data types.
+-> list is mutable, bcz we can change the value.
+ 	-> all the values are stored in ordered format all the values are stored between square brackets []
+ 	-> all the values separated by comma
+ 	-> list is represented by "list" 	
+
+syntax:
+ 		var=[val1,val2, val3,...... valn]
+ 	ex: s=[1,1,2,3,4,5,6]
+ 		 z=[1,2,32.25,4+6j,5.2,78,'hi','bye']
+
+default value => []
+list() =. t check default
+len(list) => to check length
+
+
+
+
+
+memory management in ListDT:
+ 	--> whenever the controller sees the collection DT, it will create a memory layer in the heap memory. 		
+--> it will check the length of the given collection and create that much blocks inside the memory layer 		
+--> then it will store each value inside one block respectively 
+
+	
+-->indexing/subaddressing: 		
+ there are two types of indexing 		
+ 1)+ve indexing (0 to len(collection)-1)(left to right) 
+		2)-ve indexing (-1 to -len(collection)) (right to left) 		
+
+→ After indexing, the controller will take the address of the whole memory layer and store it in a given variable .
+	-->even if we give -ve indexing, internally it is converted to 	+ve indexing 					 +ve index=len(collection)+(-ve index)
+ 	-->to fetch any value from the given string :	var[index no] 	
+>-- in mutable DT, to modify any value ->  var[index no]=new_value 
+
+
+ly it is converted to 	+ve indexing 					 +ve index=len(collection)+(-ve index)
+ 	-->to fetch any value from the given string :	var[index no] 	
+>-- in mutable DT, to modify any value ->  var[index no]=new_value 
+
+
+tuples
+------------
+Tuple is a collection data type of homogeneous and heterogeneous.
+It is immutable
+It's a ordered data type
+All the data stored inside (), separated by comma (,)
+represented as 'tuple'
+It is more secure than a list.
+
+Syntax : var = (val1, val2, val3, .... val n)
+ex : x = (1, 2, 3)
+
+default value : ()
+tuple() => to check default value
+len() => to check len 
+
+
+
+
+
+set
+------
+Set is a collection data types, homogenous and heterogenous data types
+We can store n no of value, but it doesn't allow duplicate values
+all the values are enclosed within {}
+All values will be separated by comma
+It is an unordered data type, so it doesn;t support indexing
+All the data in set stored randomly or shuffled manner
+
+represented as 'set'
+
+Syntax : var = {val1, val2, ...val n}
+x = {1, 2, 3, 4}
+
+default val => set()
+set() => check default val
+len() => check len
+
+memory management
+--------------
+It will create a memory layer in heap memory.
+It check the length of set, divide that memory into that muh parts
+It will store all the randomly
+it will some address
+in stack memory var will point to the address
+
+
+Dictionary
+-------------
+This is a collection DT with Key, Value pair
+To assign any value for any key we use colon (:)
+all key value pairs will be separated by ,
+enclosed within {}
+Key can't be duplicated but we can store duplicate values
+Dictionary is mutable :- update, add, remove, etc operations can be does
+It is unordered DT
+keys are case sensitive
+keys must be immutable or single values Data Types, we can't write set and list as dict key
+ and value can be of both mutable and immutable
+
+ controller can only access to keys
+
+ represented as ‘dict’
+
+ Syntax : var = {key1:val1, key2:val2, ...., key n : val n}
+ ex : - x = {1 : True, False : "No", 0j : [1, 2, 3], 10.5 : (1, 2, 3), "name' : "Msys", "Name: True}
+
+ To access a value : var[key]
+ ex : x[1] --> True
+ x[0j]  --> [1, 2, 3]
+
+ To update value of key ->  var[key] = new val
+ to to add new key value pair : var[new_key] = new_val
+
+ default value --> {}
+ dict() -> to check default value
+ len() -> to check no of elements
+
+
+memory management
+==================
+when our controller sees a dict. DT it will create a dict block with key and val in Heap memory
+first it will store all the leys
+then it will store values one by one
+then assign some address to that dict block
+in stack memory var will point to that address
+
+
+
+Slicing
+-------------
+It's a way of extracting required set of elements from a given collection
+we use indexing to perform Slicing
+can be performed on ordered DT -> string, list, tuple
+
+arr = [1, 2, 3, 4, 5, 6, 7, 8]
+
+Syntax : var[start_index: end_index +/- 1: updation/step< optional >]
+
+they are of two types
+    +ve update
+    -ve update
+
+
+
+
+
+
++ve updation
+-------------
+When we want to fetch value from left to right we use +ve updation
+    start_index < end_index
+
+    Syntax; var[start_index:end_index + 1:step/updation]
+
+default start_index = 0
+default end_index = len(collection)
+default updation = +1
+
+we use step or updation skip character from give collection
+
+-ve updation
+----------------
+we fetch value from right to left
+    start_index > end_index
+
+Syntax : var[start_index: end_index -1: stpe]
+
+default start_index = > -1
+default end_index => -len(collection) -1
+step => -1
+
+
+Default values
+---------------
+DT       	   func   	     val
+-----    		   -----       	------
+integer 	    int()     	  0
+float      	     float()  	   0.0
+complex 	    complex() 	  0j
+Boolean  	    bool()     	 False
+string     	     str()      	 ""
+list      		     list()     	 []
+tuple   		    tuple()    	 ()
+set    		     set()     	  set()
+dict 	               dict()   	   {}
+
+
+
+
+Types Casting
+---------------
+To converting one DT another DT
+
+Source DT               ------->                  	      converted DT
+--------------                                  		       -----------------
+float, bool, str(only integer value)        --->                    int
+int, bool, str(only int or float value)     --->                    float
+int, float, bool, str (all numeric DT int, float, complex) -->      complex
+any DT (default will return False, else True)   ---->               bool
+any DT                                 		         --->                str
+str, tuple, set, dict (list of keys only)       --->                list
+str, list, set, dict (list of keys only)       --->                 tuple
+str, list, tuple, dict (list of keys only)       --->                set
+nested data types (with 2 values)            ---->               dict
+
+ex: ([1, 2], ["a", "b"])
+[{1, 2}, [3, 4], (1, 2)]
+
+
+Operators
+-----------------
+These are special symbols used to perform specific task.
+
+Syntax : val 1 (Operator) val 2
+val 1 and val 2 are called operands
+
+
+There are 7 types of Operators
+==============================
+Arithmetic Op.
+logical  Op.
+Relational op.
+Assignment Op.
+Bitwise Op.
+Membership Op.
+Identity Op.
+
+Arithmetic Op.
+-------------------
+These are used for Arithmetic operations
+
+a) addition         --> +
+b) subtraction     --> -
+c) multiplication   --> * 
+d) true division    --> /
+e) floor division   --> //
+g) modulus          --> %
+h) power            --> **
+
+    a) addition / concatenation --> +
+        Syntax : val1 + val2
+
+        svdt + svdt  ---> addition
+        collection + collection ---> concatenation
+
+        * collections must be of same type (only str, list, tuple)
+
+    b) subtraction -> -
+        Syntax : val1 - val2
+
+        svdt - svdt
+
+        this is applicable to svdt only
+
+    c) multiplication -> *
+        Syntax : val1 * val2
+
+        svdt * svdt
+        collection * int
+
+        * we can multiply collection (str, list, tuple only) with only int
+
+    d) true division --> /
+        Syntax : val1 / val2
+
+        return the result in float value
+
+    e) floor division  --> //
+        Syntax : val 1 // val 2
+
+        return the result in int value
+
+    f) modulus --> %
+        it return reminder
+
+        Syntax : val 1 % val2
+
+    g) pow --> **
+        it return pow of val 1 with respect to val 2
+
+        Syntax : val 1 ** val 2
+
+Logical Op.
+---------------
+Logical and 
+Logical or 
+logical not 
+
+    a) Logical AND    --> and
+        -> when ip1 will low op will be ip1
+        -> when ip1 is high res will be ip2
+
+    b) logical OR      --> or
+        ->  when ip1 is low, res is ip2
+        ->  when the ip1 is high res is ip1
+
+    c) Logical Not     --> not
+        ---> when ip is low res is high (True)
+        ----> when the ip is high , res low (False)
+
+        * this will return Boolean values only
+
+
+Relational Op.
+----------------
+It will return Boolean value ( True or False)
+1) equal to (==)
+2) not equal to (!=)
+3) less than (<)
+4) greater than (>)
+5) less than or equal to(<=)
+6) greater than or equal to(>=)
+
+    1) equal to 
+    ----------------
+    It will check both values are same or not
+    If both values are equal it will return True, else it will return False
+    It will check all the values using their ASCII val
+
+    val 1 == val 2,  10 == 5 -> False and 5 == 5 -> True
+
+    2) not equal to ( != )
+    ----------------------
+    It will check both values are same or not
+    If both values are same, it will return False, else it will return True
+
+    Syntax : val 1 != val 2, 
+            10 != 20 -> True
+            "" != " " -> True
+            5 != 5 -> False
+
+    
+    3) less than (<)
+    -------------------
+    It will check if val 1 is less than val 2.
+    if val 1 is < val 2 , return True, else False
+
+    for svdt it will check both the values compare then, return the res. ( except complex value)
+
+    for collection, it will compare their length
+                    it will elements 1 by one , if condition satisfied then true, else False
+
+    4) greater than ( > )
+    -----------------------
+    if the val  1 is > val 2
+    if val 1 > val 2, it will return True, else False
+
+    5) less than or equal to(<=)
+    ---------------------------------
+     It will check if the val 1 is less than  or wqual to val 2 or not
+    if val 1 is <= val 2 , return True, else False
+
+    6) greater than or equal to(>=)
+    ---------------------------------------
+    if the val  1 is >= val 2
+    if val 1 >= val 2, it will return True, else False
+
+
+Assignment Op.
+-------------
+var = val
+
+1) a = 10
+2) a += 5 ---> a = a+ 5
+3) a -= 10 ---> a = a- 10
+4) a *= 10 ---> a = a* 10
+5) a /= 10  ---> a = a / 10
+6) a //= 10 ---> a = a// 10
+7) a %= 10   ---> a = a % 10
+8) a **= 10  --> a = a ** 10
+
+
+Bitwise Op.
+---------------------
+    a) Bitwise and ( & )
+    b) Bitwise or ( | )
+    c) Bitwise not ( ~ )
+    d) Bitwise xor ( ^ )
+    e) Bitwise right shift ( >> )
+    e) Bitwise left shift ( << )
+
+    a) Bitwise and ( & )
+    ----------------------
+    Syntax : val1 & val2
+    it will both val to its binary form
+    controller will start computation from right to left
+    if both the values are 1 it will be 1, else 0
+
+    b) Bitwise or ( | )
+    --------------------
+    Syntax : val1 | val2
+
+    it will convert to binary form
+    controller will start computation from right to left
+    if at least 1 val is 1, it will be 1, else 0
+    it will return the value as int
+
+    c) Bitwise not ( ~ )
+    ---------------------
+    Syntax : ~ val
+
+    controller will convert the val into binary
+    controller will start computation from right to left
+
+    if +ve numbers
+    ------------
+    it will invert the values one by one from right to left until it found first 0
+    it will invert the 0 also
+    the remaining values are taken as it is
+    it will return the val in int format as -ve
+
+
+    if -ve numbers
+    -----------------
+    it will invert the values one by one from right to left until it found first 1
+    it will invert the 1 also
+    the remaining values are taken as it is
+    it will return the val in int format as +ve
+
+    d) xor ( ^ )
+    --------------
+    Syntax : val1 ^ val2
+
+    it will convert to binary form
+    controller will start computation from right to left
+    if aif both the values are equal it gives 0, else 1
+    it will return the value as int
+    
+    e) Bitwise right shift ( >> )
+    -------------------------------
+        
+        if give positive or niegitive shifts the number to right and filled with 0 in void
+
+        
+
+    f) Bitwise left shift ( << )
+    ---------------------------
+    it will shift the to left 
+    fill 0 in void whether its +ve number or -ve number
+
+6) Membership Op.
+--------------------
+for mebership op. we use in and not in
+return type 'bool'
+in
+----
+Syntax :
+     val in collection --> str, list, tuple, set, dict
+
+        this Operator is used to check if a value is a member of a collection or not
+        if it is present in that collection it will return True
+        else it will return False
+
+        in dict we can't access the values, we can access the keys only
+
+not in
+----------
+    val not in collection
+        if val is not present in collection it return True
+        if present it return False
+
+
+7) Identity Op.
+------------------
+identify op. are of 2 types
+
+    is
+    is not
+
+    is 
+    -------
+    this Operator compares two objects if both are same then it will return true
+    otherwse False
+    Synatx: val1 is val2
+
+    is not
+    --------
+    it will check if both objects are same or diffreent
+    if both are same objet it will return False
+    otherwse it will return true
+
+    val1 is not val2
+
+    identify Operator mainly used to check if a value is None or not
+
+
+Control Statement
+------------------
+They are of 2 types
+    1) Decisional Statement
+    2) looping Statement
+
+1) Decisional Statement
+--------------------------
+these are the Statements uhich will control the flow of execution of progam.
+
+These are of 4 types
+    1) if 
+    2) if ... else...
+    3) elif
+    4) nested if
+
+if Statements
+---------------------
+it is a type of Statement which executes some set of statemnts called true statement block(TSB)
+when the constion becames true or condtion statisfied
+
+if the constion becomes false code will not executes and directly go the next line
+
+Syntax :
+if condtion:
+    TSB ( true statement block)
+
+
+
+if ... else ....
+-----------------------
+it is a type of statement , which executes some set of statement if constion is ture, that statement is called TSB
+
+if the constion is False it will execute false statement block
+
+Syntax:
+if condition:
+    TSB - True statement block
+else:
+    False Statement Block (FSB)
+
+elif
+-------------
+it is a type of statement, which will check n number of conditions
+if any condtion becames true, it will execute the TSB(True statement Block) of that condition
+and it will exit the statement without checking following condtions
+
+if condition is false controller will go the next condtion and if it is true, it will execute the TSB then it will exit the statement
+
+if all the conditions are Fasle then it will execute the default False Statement
+
+
+Syntax:
+
+if condtion 1:
+    TSB 1
+elif condtion 2:
+    TSB 2
+.
+.
+.
+
+elif condition n:
+    TSB n
+else:
+    FSB
+
+we have to start with if and else is optional here.
+
+nested if
+-------------
+An if condition inside another if constion is called nested if
+
+we use this to break the huge or big condition to small condition
+
+Syntax:
+
+if outer_condition 1:
+    if inner_constion 1:
+        TSB
+    else:
+        FSB
+else:
+    if inner_constion 1:
+        TSB
+    else:
+        FSB
+
+looping
+--------
+looping is used to iterate over collection. (visiting all elemnts 1 by 1)
+we can execute a block of code n number of tme using Looping.
+
+There are two types of looping
+    while
+    for
+
+while looping
+--------------
+while loop is used to execute a block of statements repeatedly until a given condition
+satisfies. when the condition becomes false it executes the next line.
+
+initialization
+while condition:
+    statements
+    updation - increment / decrement
+
+
+Note - if we are unable to make this condition False, we will get infinite loop
+i.e. The loop  will continue for infinite times.
+
+ex:  print all numbers from 1 to 10 including 10.
+
+n = 1
+
+while n <= 10:
+    print(n)
+    n = n + 1
+
+m = 20
+n = 30
+ 
+while m <= n:
+    if m % 2 != 0:
+        print(m)
+    m += 1
+
+n = 1457
+rev = 0
+ 
+while n > 0: # n = 0 > 0
+    rem = n % 10 # rem = 1
+    rev = rev * 10 + rem # (754 * 10) + 1 | rev = 7541
+    n = n // 10 # n = 0
+print(rev) # 7541
+arr = [2, 3, 4, 5, 6]
+ 
+start = 0
+end = len(arr) - 1
+ 
+while start <= end:
+    print(arr[start])
+    start += 1
+
+n = 1
+ 
+while n < 100:
+    if n % 5 == 0:
+        print(n)
+    n += 1
+
+arr = [10, 9, 8, 7, 6, 5, 4, 3]
+start = 0
+end = len(arr) - 1
+ 
+while start <= end:
+    if arr[start] % 2 == 0:
+        print(arr[start])
+    start += 1
+
+n = 153
+res = 0
+temp = n
+ 
+while n > 0:
+    rem = n % 10
+    res = res + rem ** 3
+    n =n // 10
+ 
+if res == temp:
+    print('this is armstrong')
+else:
+    print('this is not')
+
+
+# palindrome
+# if a number is equal to its reversed value , then it is a pallindrome
+# 121 = 121
+# 432 != 234 , not
+n = 141
+temp = n
+rev = 0
+ 
+while n > 0: # n = 0 > 0
+    rem = n % 10 # rem = 1
+    rev = rev * 10 + rem # (754 * 10) + 1 | rev = 7541
+    n = n // 10 # n = 0
+ 
+if rev == temp:
+    print('palindrome')
+else:
+    print('it is not')
+
+.,
+
+break
+continue
+pass
+
+break statement
+----------------
+it is used to break the loop and send back to main space
+this statement is only written inside a loop
+it is used to break the loop
+
+continue statement
+-----------------------
+It will end the current iteration 
+it will execute the next iteration
+
+pass
+-------
+pass is used as a placeholder for future code
+when the pass statement is executed nothing happens, but it helps to avoid getting empty code error
+it defines empty code block
+
+For Loop 
+------------
+when we know the exact number of iteration we will go with for loop
+we use in Operator to get the  values
+
+for val in collection:
+    statement 1
+    statement 2
+    statement n
+
+range()
+------------
+by using range() we can iterate all the numbers
+it will return a range objects
+
++ve updation
+range(start, end + 1, 1)
+
+-ve updation
+range(start, end - 1, -1)
+
+print(list(range(1, 101)))
+
+for i in range(0, len(s)):
+    print('at index', i, 'value is')
+
+arr = [4, 10, 9, 11, 5, 4, 2, 8, 6]
+ 
+for i in range(0, len(arr)):
+    if i % 2 == 0 :
+        print(arr[i] ** 2)
+ 
+
+# WAP to count the number of particular element from collection
+s = 'MSys is a company'
+char = 's'
+count = 0
+for i in s:
+    if i == char:
+        count += 1
+print(count)# from a given string count the no of uppercase, lowercase and 
+spaces
+s = 'MSys is a company'
+res = {'upper':0, 'lower':0, 'space':0}
+ 
+for  i in s:
+    if i == ' ':
+        res['space'] += 1
+    elif 'A' <= i <= 'Z':
+        res['upper'] = res['upper'] + 1
+    elif 'a' <= i <= 'z':
+        res['lower'] = res['lower'] + 1
+ 
+print(res)
+
+# from a given list, print how many times each element repeated
+arr = [1, 2, 3, 1, 10]
+res = {}
+print(res)
+for i in arr: # i = 10
+    if i in res:
+        res[i] = res[i] + 1
+    else:
+        res[i] = 1
+for key, value in res.items():
+    print(key, 'is present for', value, 'times')
+ 
+
+ 
+arr = [-1, -3, 1, -5, 2, -10, 8, 7]
+p = []
+n = []
+ 
+for i in arr:
+    if i > 0:
+        p.append(i)
+    else:
+        n.append(i)
+ 
+print('+ve numbers', p)
+print('-ve numbers', n)
+Nested loop
+------------
+Executing one loop inside another loop
+    Nested For
+    ----------------
+    Syntax :
+
+    for val in collection:
+        for val2 in collection2:
+            statement 1
+            statement 2
+
+        outer statement 1
+        outer statement 2
+
+    Nested while
+
+    
+
+enumerate()
+------------
+It is a built in function
+    for a ordered collection it will return index and values
+    Syntax:
+    for i, v in enumerate(collection):
+        print(i, v)
+
+zip()
+-------
+It is an inbuilt function 
+it will take 2 collection with same length or it will slice to it to smallest len collection
+
+it will return collection tuples
+
+zip(collection1, collection2)
+
+
+
+yogesh@msystechnologies.com
+rajesh@msystechnologies.com
+inamachivayam@msystechnologies.com
+mhussain@msystechnologies.com
+
+
+
+
+
+
+
+
+
+
+
+
+
+

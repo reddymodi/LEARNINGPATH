@@ -156,7 +156,6 @@ MOST USED COMMONDS:
 ----"id" commond used to display the user id and group id.ex: id
 ----"useradd" commond is used to add or remove a user on linux server.x:sudo useradd javapoint
 ----"passwd" command is used to chnage are update a password.ex"sudo paasswd JTP
-
 LINUX FILTER COMMONDS:
 -----"cat" commonsd also used as filter.to filter a file inside a pipes.
       ex:cat demo.txt | tac | cat | tac
@@ -253,4 +252,28 @@ LINUX SU COMMONDS:
       EX: sudo /usr/sbin/useradd -m akki
 -----to perform root like a task , a user given all sudo rights to etc/sudoers.
      ex:grep admin etc/sudoers
------
+LINUX USER MANAGEMENT:
+----the local user database in linux is etc/passwd directory.EX: tail etc/passwd.
+----"useradd -D "used to display the files
+----"userdel" it used to delete a acount user.
+----"usermod' commond is used to modify the properties of user ex: usermod -c "Modi" modi
+----"/etc/skel" its contains some hidden files . while using "usermod -m" opiton, the /etc/skel/ is copied to newly created directory
+----"userdel -r" its deleted user and along with user acount
+----"/etc/passwd" tells login  shell for the present user. EX:tail -2 /etc/paswd
+----"usermod -s" you can change the shell mode in use usermod commond Ex:usermod -s /bin/bash/Modi
+----"chsh' and "chsh -s" it used to change the login shell.Ex:chsh /bin/sh or chsh -s /bin/sh
+LINUX PASWORD COMMONDS:
+----"passwd" change the password for current users are directorys.EX:passwd or passwd Modi
+----"/etc/shadow" shadow files are encrypted user passwords.this can be read only directory and read only root.
+----"openssl passwd" it can be generate a several distinct hashes for the same password.to do this its use salt.
+     Ex:openssl passwd hunter2
+----"salt" is visible the first two charecters of hashes.EX:openssl passwd -salt Modi
+----To create a user with paswword using openssl commond
+    EX:useradd -m -p$(openssl paeewd hunter2) kesav.
+----"/etc/login.dfs" it contain some default settings ike password aging and length setting.
+    Ex:grep PASS /etc/logins.dfs
+----"change" commond is used to know the about the password information.the "-l" option is used to list the information
+    EX:change -l Modi
+----the features can be used to disable the paswword is callaed locking ,disbleing and suspendimg a user account.
+    it can be done by vi mod and usermod.
+    Ex:usermod -L Modi.

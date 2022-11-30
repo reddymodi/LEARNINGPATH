@@ -277,3 +277,71 @@ LINUX PASWORD COMMONDS:
 ----the features can be used to disable the paswword is callaed locking ,disbleing and suspendimg a user account.
     it can be done by vi mod and usermod.
     Ex:usermod -L Modi.
+To create a user:  sudo useradd name
+to create a group: sudo groupadd name
+
+to add a user to a particular group: sudo usermod -a -G groupname username
+to add a suer to multiple groups: sudo usermod -a -G primarygrpname, groupname1, grpname2 username
+ to list all the groups in system: getent groups
+to del a user from group: sudo gpasswd -d usrname grpname
+
+-G is to change secondary group
+-g is to change primary group
+
+
+file systems:
+
+ext,ext2,ext3,ext4  are extended file systems which were used in minix os, these are no longer used, these are old versions
+among all these extended file systems ext4 is faster and it is the default file system in linux distributions
+
+JFS FILE SYSTEM:
+
+Journaled file system, it is developed by IBM for AIX unix.it can be used in place of ext4, it is a handy file system when CPU power is limited.
+
+ReiserFS file system:  it is an alternative file system for ext3, it has so many drawbacks
+
+XFS file system:  it is cosidered as the high speed jornled file system which is developed for parallel I/O proccessing. NASA is still using this file system with its high storage server 300+ terabyte server.
+
+Btrfs--B tree file system, it is used for fault tolerance ,repair system, extensive storage configuration,it is not good for production system
+
+Swap file system: 
+
+
+PRINT:
+
+Ip file_name  -- to print a file
+
+Ipstat -p -d  : to list all the printers connected
+
+Ip -d printer_name  file_name
+Ipr -P printer_name  file_name  : to print file from particular printer
+
+I poptions -d printer_name  : to set the default printer
+
+Ip -n number_of_copies file_name:  to print multiple copies
+Ipr _#number file_name
+
+cancel job-id : to cancel the queued job
+
+to see job-id use Ipq or Ipstat commands
+
+to move to queued print job to another printer :  Ipmove job-id printer_name
+
+to print two sides of the page:  Ip -o sides=two-sided-short-edge file_name
+                                 Ip -o sides=two-sided-long-edge file_name
+
+
+Processes::
+
+many programs may  take place in RAM or in CPU by OS or by users, these programms are called as Processes.
+
+Process will be terminated on its own when completed or when we kill it
+ some processes will hang up due to errors or due to consuming high CPU% etc,we need to kill those processes else our system will hang up
+
+to kill a process we need to know the process information like Process id(PID),signal and more
+top-- to know all the running processes with PID, name,cpu% etc
+gs aux -- to know all the running processes.. 
+    a- to display processes running by all users
+    u-   to display processes running by particular user
+    x- to display processes running by GUI
+

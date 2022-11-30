@@ -277,25 +277,35 @@ LINUX PASWORD COMMONDS:
 ----the features can be used to disable the paswword is callaed locking ,disbleing and suspendimg a user account.
     it can be done by vi mod and usermod.
     Ex:usermod -L Modi.
+----every linux distrubution have too manage groups . goups can be managed by graphcal tools and commond line tools
+----"groupadd" commond is used to add the group.
+----"etc/group" tells itsa group membership.a user can be morethan on group.
+----"group" commond is used to user commond belongs to.
+----the group member is edit with "usermod" are "useradd" commonds.and "-a" useed to append auser to group.
+----"groupmod" commond is used to change the group name in existing group.Ex:groupmod -n groupname.
+----"gpasswd" control of group membership passed on another user.ex:gpasswd -A user group
+---primary group:when we create afile in user account,by default filegroup set to primary group.its stores the users information.
+---secondry group:to specific permissions to limited users.
 To create a user:  sudo useradd name
 to create a group: sudo groupadd name
 
-to add a user to a particular group: sudo usermod -a -G groupname username
-to add a suer to multiple groups: sudo usermod -a -G primarygrpname, groupname1, grpname2 username
- to list all the groups in system: getent groups
-to del a user from group: sudo gpasswd -d usrname grpname
+to add a user to a particular group: "sudo usermod -a -G groupname username"
+to add a suer to multiple groups: "sudo usermod -a -G primarygrpname, groupname1, grpname2 username"
+to list all the groups in system: "getent groups"
+to del a user from group: "sudo gpasswd -d usrname grpname"
+to change the users primayr group:"sudo usermod -g groupname username"
 
 -G is to change secondary group
 -g is to change primary group
-
+----linux everything like a file.if it is not file its porccess.a file doesnt nlude only files,images and audio files and more.
 
 file systems:
+--- a linux filesystem is a collections of files or disk drive partitions.
 
-ext,ext2,ext3,ext4  are extended file systems which were used in minix os, these are no longer used, these are old versions
+ext,ext2,ext3,ext4  are extended file systems which were used in uinix os, these are no longer used, these are old versions
 among all these extended file systems ext4 is faster and it is the default file system in linux distributions
 
 JFS FILE SYSTEM:
-
 Journaled file system, it is developed by IBM for AIX unix.it can be used in place of ext4, it is a handy file system when CPU power is limited.
 
 ReiserFS file system:  it is an alternative file system for ext3, it has so many drawbacks
@@ -304,28 +314,37 @@ XFS file system:  it is cosidered as the high speed jornled file system which i
 
 Btrfs--B tree file system, it is used for fault tolerance ,repair system, extensive storage configuration,it is not good for production system
 
-Swap file system: 
-
+---linux display the files in vairous ways like "cat,less,nl,more,gnome-open,kde-openxdg-open,head,tail,open".
+---linux files editsso many ways like"vi, cat >, echo > ,>,nano,emacs"
+---linux "strings" commond is used to return a string character into files.
+---however we can change the limit in forcefullly used to "-n" commond.ex:stringd -n number text.txt
+---piping the limit to use pip symbol ex:strings filename | less
+---to print the new charactre and lines in used to "-w" commond in files.ex:strings -w filename
+---"vi stringout" commond us used create string fileand excute commmond is "strings @stringout filename".
 
 PRINT:
+---linux "print" commond used to print afile or output.
+---ip or ipr used to print a terminal.
+---ipg used to dispaly the queued print jobs.
+---
 
 Ip file_name  -- to print a file
 
-Ipstat -p -d  : to list all the printers connected
+"Ipstat -p -d"  : to list all the printers connected."-p" is uded to display the list of printers."-d" is specifies the default printer
 
-Ip -d printer_name  file_name
-Ipr -P printer_name  file_name  : to print file from particular printer
+"Ip -d printer_name  file_name"
+"Ipr -P printer_name  file_name"  : to print file from particular printer
 
-I poptions -d printer_name  : to set the default printer
+"Ipoptions -d printer_name"  : to set the default printer
 
-Ip -n number_of_copies file_name:  to print multiple copies
-Ipr _#number file_name
+"Ip -n number_of_copies file_name":  to print multiple copies
+"Ipr _#number file_name"
 
-cancel job-id : to cancel the queued job
+'cancel job-id" : to cancel the queued job and "iprm jon-id"
 
-to see job-id use Ipq or Ipstat commands
+to see job-id use "Ipq or Ipstat" commands
 
-to move to queued print job to another printer :  Ipmove job-id printer_name
+to move to queued print job to another printer :  "Ipmove job-id printer_name"
 
 to print two sides of the page:  Ip -o sides=two-sided-short-edge file_name
                                  Ip -o sides=two-sided-long-edge file_name

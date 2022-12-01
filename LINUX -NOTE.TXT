@@ -349,7 +349,7 @@ to move to queued print job to another printer :  "Ipmove job-id printer_name"
 to print two sides of the page:  Ip -o sides=two-sided-short-edge file_name
                                  Ip -o sides=two-sided-long-edge file_name
 
-
+--
 Processes::
 
 many programs may  take place in RAM or in CPU by OS or by users, these programms are called as Processes.
@@ -358,9 +358,45 @@ Process will be terminated on its own when completed or when we kill it
  some processes will hang up due to errors or due to consuming high CPU% etc,we need to kill those processes else our system will hang up
 
 to kill a process we need to know the process information like Process id(PID),signal and more
-top-- to know all the running processes with PID, name,cpu% etc
-gs aux -- to know all the running processes.. 
+---"top" to know all the running processes with PID, name,cpu% etc
+---"ps aux" -- to know all the running processes.. 
     a- to display processes running by all users
     u-   to display processes running by particular user
     x- to display processes running by GUI
+---suppose we want filter the user in ps used commond is "ps aux | grep username".
+---"pidof" is used to locate the pid of procccess.ex:pidof proccessname.
+---"killall" commond is used to killl the proccess and quit the proccess. EX:killall proccessname.
+---to forcefull ykill the process excute the 'kilall' commond with "-SIGKILL".EX:killall -SIGKILL proccessname.
+---to kill aproccess intractivlt "-i".ex:killall -i proccessname.
+---ot kill a proccess diffrent user.EX:"killall -i processname.
+---we can also killa process in fixed time period used to "-y" or "-o" flags.EX:killall -y 20m proccessname.
+---"pkill" is used to kill the matching processnames.EX:pkill fire.
+---"kill -l" is show the list of signals.
+---"xlsclients" to get a list of x clients.
+---"nohup" this commond is overcome the problems and ignores the all hangup signals and allows the proccess to continue.ex:nohup cat string.sh after "nohup.out'
+----to satrt a proccess in background used to "&" symbol.it will excute the proces in background EX:ping w3cshool.com &.
+----"at" commond is used to schdule a task to excute a once it at specified time,without editing configuration time.
+----"atq" commond is used to display the all users pending tasks.
+----"atrm" is used todisplay the delete tasks and identify their jobs.
+----"atq" isused to list the schduked tasks.ex: atq 
+----"atrm" is used to remove the schduele in folloeing job id.EX:atrm -jobid.
+----"-c" check the conten of scheduled task.EX:at -c jobid
+----"exit" is used to exit the terminal.
+FHS(filesystem hierrarchy standard):
+  FHS desciribes directorys structures and it content in unix and unix is a operaitng system.its explain where files and directorys should be located 
+  what should contain.
+---"BINARY DIRECTORY"= the binary files contain compiled source code.
+    binary directory contains sub directres like---"/bin","lib","sbin","opt".
+    ex: ls /bin ,ls /sbin, ls /lib, ls /opt
+---CONFIGURATION DIRECTORY: its contain configured files which configures the parameters and intial settings and some computer progrmas.
+                             its folloe ssub directorys like"/boot" "/etc". EX:ls /boot, ls /etc.
+---DATA DIRECTORY is used to store the data of the system.its following directories like"/home,/root,/srv,/media,/mnr,/tmp".
+       Ex: ls /home, ls /root, ls /srv....
+---MEMORY DIRECTORY  contain the files of the whole sysyem.al the devcie information and procceing running data and system
+   related information stored in this directory.this directory folowing directories like "/dec, /proc, /sys".
+   Ex:ls /dec, ls /proc, ls /sys.
+   in "proc" and "sys" it show the kernal view.
+----USR(UNIX SYSTEM RESOURCES):it is also called secondry hirearchy it contains binarys,libraries,
+
+
 

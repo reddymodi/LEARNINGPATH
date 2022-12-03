@@ -417,4 +417,28 @@ LINUX FILTERS: linux filters accept input data from stdin and produce output fro
          cat > filename <<EOF --- tthe "EOF" end marker paassing the commond"cat > filename <<EOF".
          cat filename | cat | tac | cat ---- it doesnothing happen except moving stdin to stdout.
 
+LINUX CUT: linux cut commond is used to to specify the colomn of the file.to cut a sppecific section it is neccaery to specify the delimeter.
+           delieters can be space(" "),slash(/),hypen(-) or anythingg else.after"-f" coloum number is mentioned.
+           "-b" --- cut thespecific section by bytes
+           "-c" --- cut the specificc chaarcters.
+           "-d" --- cut the specific delieter
+           "-fnumber" -- cut the specifiic columns.
+           "-n" -- it is ignore to any option
+           "--complement" --- it isused to complement set of selected by bytes and character of fields.
+           "-s" -- it is used d not print the lines .that do not delimeters.
+           "-z" --- i is used to if line delemetr is null , next ;ine null.
+           ex:cut -d- -f2 filename , cut -d- " " filename, cut -b filename....
+ LINUX GREP:USED TO filter the content in of file in makes our search easy.
+            ex:cat filename | grep search item
+               grep -v searchname filename --- it s print the not marching the serachword.
+ LINUX TEE:tee commond is used to copy the content in one file to another new file.
+           "-a" --- append th etext in file
+           "-i" --- ignore the intrupters.
+           "-p" it is used to daignoise errors writing.
+           ex:cat file | tee file1 and echo "soetext" | tac -a file1
+ LINUX TR: its convirting uppercase to lowercase.
+           cat filename | tr "old" "new"
+           cat filename | tr "/n" " " ---- print the row
+           cat filename | tr -s "character" -- it print only ine charecter.
+           cat filename | tr -d character --- delete the charecter
 

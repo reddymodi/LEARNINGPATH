@@ -397,6 +397,24 @@ FHS(filesystem hierrarchy standard):
    Ex:ls /dec, ls /proc, ls /sys.
    in "proc" and "sys" it show the kernal view.
 ----USR(UNIX SYSTEM RESOURCES):it is also called secondry hirearchy it contains binarys,libraries,
+    ---usr/bin,usr/include,usr/lib,usr/share,usr/local,usr/src
+      Ex:ls usr/bin
+-----varible directory:the varible files that have an unexpected size whoswe content change to continusly during normal operation of the system 
+                        stored here.for examplw log files and spool files and cache files some of the /var suub directory files.
+                        like "/var/log" "/var/cache/" "/var/spool" "/var/lib".
+NON-STANDARD DIRECTORYS:directorys which do not come under standard the FHS ar called non-standard directorys
+                        some non-directory fileslike"/cdrom","/run","/lost +found".
 
+LINUX FILTERS: linux filters accept input data from stdin and produce output from stdout.it transform plian text to meanigful way.
+               and can be used pipe with hiegher operations.
+     
+     cat:cat oldfile > newfile --- too copy content from pone file to another file.
+         cat file1 file2 .. > newfile --- too conacte multiple files content to one file.
+         cat - file1 dile2 file3 > newfile---to conacte and end of the file add the content
+         cat -n filename---displya the number of lines
+         cat -b filename --used to remove the empty space.
+         cat -e fileame --to dispaly "$" symbol in end of the file
+         cat > filename <<EOF --- tthe "EOF" end marker paassing the commond"cat > filename <<EOF".
+         cat filename | cat | tac | cat ---- it doesnothing happen except moving stdin to stdout.
 
 

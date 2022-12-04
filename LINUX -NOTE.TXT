@@ -441,4 +441,47 @@ LINUX CUT: linux cut commond is used to to specify the colomn of the file.to cut
            cat filename | tr "/n" " " ---- print the row
            cat filename | tr -s "character" -- it print only ine charecter.
            cat filename | tr -d character --- delete the charecter
-
+LINUX UNIQ:uniq commond is used to remove the repeated lines from  file.
+           "-c" : its coun the words.ex sort filename | uniq -c
+           "-d" : it show the repated wpords are char.ex:sort filename | uniq -d
+           "-D" : it show the repated word. ex : sort filename | uniq -D
+           "-s" : use to avoid the compariosons of first n charecters.Ex:sort filename | uniq -s number
+           "-u" : its dislay the unie words.
+           "-f" : used to ignore the compaison of first number of fields. ex: uniq -f number filename
+LINUX WC: wc commond used to count the charctersa nd words and lines in a file.
+          "-c" : used to coun the bytes Ex: wc -c filename
+          "-l" : used to count the no of linnes Ex: wc -l filename
+          "-m" : used to count the number of charecters. Ex: wc -m filename
+          "-w" " used to dispaly the count of words. ex: wc -w filename
+          "ls | wc -l" : used to count the no of files.
+          "-L" : used to display the longest lenth of the file. Ex: wc -L filename
+LINUX SORT: it used to sort the file content.
+           "-k number" is used t sort the column in file .Ex: sort -k 1 filename
+           "-n " is used to sort the numaric values in file. Ex: sort -n -k 2filename
+LINUX GZIP: it used to compressing tool, truncate the file size.
+            "cat filename | gzip > file.gz" -- it convartin gzip files
+LINUX AWK: the awk is powerful scripting language is used for text scripting.its searches and replaces the texts and sorts
+           validates, and index databses.
+     Features of AWK:
+            --its scan by line line
+            ---its compare the input text are segment of text file.
+            ---its perform ardhametic and string functions.
+            ---its applies conditions and loops of the output
+            --- its trnsform the files in specific structure.
+      syntax: awk '{print"hello welcome to awk commond"}'
+      "-f" : its read rhe source code and written in awk commond.
+      "-F" : it use dto input field seperator.
+      "character" : used to list the specific character.Ex: awk '/cse/{print}' filename
+      "awk '{print}' filename" : its dispaly the alll lines in file.
+      "NR" : used to print the cuurent lines count Ex:awk '{printNR $0}' filenmae
+      "NF" : used to count the number o ffields i current database. Ex: awk '{print NF,$0}' filename
+      "FS" : used to divide a fielsd sinto inputl ine. Ex" awk '{print Fs,$0}' filename
+      "ORS" " its print the content of the ors .Ex: awk'BEGIN{ORS=","}{printf $0}' filename
+      ---print the square of numbers in awk?
+      awk 'BEGIN{for(i=1;i<=8;i++)print "square of",i,"is",*i;}' filename
+      ----- calculate the sum of particular column?
+      awk -f"," '{x+=$3}END{print x}' filename
+      ---find the some of individua; chRcters?
+      awk -F"," .{a[$1]+=$2;}END{for(i in a)print i","a[i];}' filename
+      ---finnd the value of exp8?
+      awk 'BEGIN{x=exp(8); print x}'

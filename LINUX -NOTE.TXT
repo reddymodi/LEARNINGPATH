@@ -282,7 +282,7 @@ LINUX PASWORD COMMONDS:
 ----"groupadd" commond is used to add the group.
 ----"etc/group" tells itsa group membership.a user can be morethan on group.
 ----"group" commond is used to user commond belongs to.
-----the group member is edit with "usermod" are "useradd" commonds.and "-a" useed to append auser to group.
+----the group member is edit with "usermod" are "useradd" commonds.and "-a" useed to append auser to group.Ex: sudo usermod -a -g groupname username
 ----"groupmod" commond is used to change the group name in existing group.Ex:groupmod -n groupname.
 ----"gpasswd" control of group membership passed on another user.ex:gpasswd -A user group
 ---primary group:when we create afile in user account,by default filegroup set to primary group.its stores the users information.
@@ -436,7 +436,7 @@ LINUX CUT: linux cut commond is used to to specify the colomn of the file.to cut
            "-a" --- append th etext in file
            "-i" --- ignore the intrupters.
            "-p" it is used to daignoise errors writing.
-           ex:cat file | tee file1 and echo "soetext" | tac -a file1
+           ex:cat file | tee file1 and echo "so text" | tac -a file1
  LINUX TR: its convirting uppercase to lowercase.
            cat filename | tr "old" "new"
            cat filename | tr "/n" " " ---- print the row

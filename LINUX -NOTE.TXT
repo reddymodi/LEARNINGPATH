@@ -1,5 +1,6 @@
 Linux is an operating system like windows,MacOs.
-Linux was developed by Linus Thorvalds in 1991, actually it was not his idea to develop an another OS,it was for an updated version of Unix but not accepted by Unix board members.
+Linux was developed by Linus Thorvalds in 1991, actually it was not his idea to develop an another OS,it was for an updated
+version of Unix but not accepted by Unix board members.
 
 Structure of Linux.
 

@@ -168,29 +168,101 @@ LINUX FILTER COMMONDS:
       ex: comm marks.txt demo.txt
 -----"sed" it is also stream editor. is edit files used to regular exprioons .its not affect to main file.
      ex: echo class7 | sed "s/class/jtp"
------"tee" commond its similor to cat commond only diffrence is it's puts standrd input on standrd output and also write them into file.  
-      ex: cat marks.txt | tee cobra.txt | cat
+     --- cat file.txt | sed "kesav/d" --- delete the word
+     --- sed -e 's/kesava/modi' ; sed -e 's/modi/kesava' -- multiline sed commend
+     --- sed '3s/kesav/modi/' file.txt  --- its change the content at line
+     --- sed '1,3s/modi/kesav' filename.txt --- it changingcertian range of file
+     --- sed 'i/firstdemo' filename.txt -- insert the comtent in file
+     --- sed 'a/filedemo' filename.txt -- append the content in file
+     --- sed  '3c/this is modified' filename --- this modified in 3 line
+     --- sed '/apple is /c /this my first sed commond' filenaem.txt --- it change content strat with apple is in the line
+     --- sed 'y/abc/def/g' filename.txt --- its chaneg characters in the file
+     --- sed '=' filename.txt --- its showing the line numbers
+     --- sed -n 'main' filename.txt -- its show ing content line number
+-----"tee" commond its similor to cat commond only diffrence is it's puts standrd input on standrd output and also write them into file.
+      ex: cat marks.txt | tee cobra.txt | cat 
+      --- echo "saturday week off" | tee filename.txt --- add the content to file.
+      --- echo "hidin" | sudo tee -a filename -- give the sudo privlagence
+      --- echo "text" | tee filename >dev/null  --- its hiding the ouput
 -----"tr" commond is used to translate the file content like uppercase to lowercase.
      ex : cat marks.txt | tr "prcu" "PRCU"
+       ---  cat exam.txt | tr -s "'l'
+       ---  cat filename | tr -d 'o' --- delete the 'o' character in file
+       --- cat filename | tr '/n' ' ' --- its converting one line text
 -----"uniq" commond is used to form a sort list evaery word occur once. ex: sort marks.txt | uniq
+       --- sort filename | uniq -c --- its count the file content
+       --- sort filename | uniq -d -- its display the repeated content
+       --- sort filename  | uniq -u --it s display the uniiq content
+       --- sort filename | uniq -s2 -- it ignore the first two lines
+       --- uniq -f 2 filename --- its ignore the first two fields remaining will be printed.
 -----"wc" is used to count The lines and charecters in file. ex:wc marks.txt
+       --- wc -l filename --- its display the numer of line
+       --- wc -m filename -- its dispaly the no of characters
+       --- wc -w filename  -- its dispaly number of words
+       --- wc -c filename -- its display the number of charactres.
+       --- wc -L filename -- its display the longest length from the file.
 -----"od" command is used to display the content diffrent such as decimal,hexa decimal, and ASCII.
       EX: od -b marks.txt (decimal)
           od -t x1 marks.txt (hexa decimal)
           od -c marks.txt (ASCII)
 -----"sort" command used to sort the file in alphabetical order. EX: sort marks.txt
+         --- sort -k2 filename --- sort the paricular column in file
+         --- sort -n k2 filename -- its sort the numaric charctes based to row 2
+         --- sort 
 -----"gzip" commond is used to truncte the file size.it is a compresion tool.EX: gzip demo.txt demo2.txt
+      --- gzip -l file fil2 file3 --- its create on zip file
+      --- tar cf -directrory | gzip directoyrname --- creat the zip in directory
 -----"gunzip" it used to decompressed a file .its reverse to gzip.
       Ex: gunzip demo.txt demo1.txt
+      --- 
 LINUX UTILITY COMMONDS:
 -----"find" commond used to  find a particular file within a directory.its also supports varios operations
       such  as by name, by data, by type and more.
       (.) for current directory and (/) for root. EX:find . -name '*pdf"
+      --- find. -type d -name ".tem" -- its find .tem extension dorectorys
+      --- find. -name demo.txt -delete  -- its find and delete the file.
+      --- find . -name -depth -name directoryname --- its serac the directory
+      --- find ./directory -mtime -- its shoe ythe modifictaion time
+      --- find ./directory +mtime  -- its show the modification up time
+      --- find ./directoryname -perm 777 --- its give all permissions to directory
+      --- find ./Newdirectory -type f -exec sed -i 's/find/replace/g' {} \;  --- its replace string certain directory
+      --- find ./directoryname -type f -name "*.txt" -exac grep demo {} \;  -- its search the string
 -----"locate" command is same as find commond .itssearch the file in database.
       EX: locate marks.txt
+      --- locate -n5 "*.txt" --- its print the first 5 files
+      --- locate -c demo* --- its counting the matching files.
+      --- loacte -i demo.txt --- its showing case sensitive lower and upper case
+      --- locate -ie demo.txt --- its showing physically file in current directory
+      --- locate -s --- its showing the mlocate time
+      --- locate -io -- its showing diffrent output
 -----"zcat" commond is used to dispaly the compressed files.
       EX:zcat 
-----"df" commmond is used to disk space used in file system.
+-----"date" its display thee date in terminasl
+      --- date + '%a %d-%m-%y'  
+          date +'%A %d-%m-%y'    
+          date +'%b %d-%m-%y'  
+          date +'%B %d-%m-%y'  
+          date +'%c %d-%m-%y'  
+          date +'%C %d-%m-%y'
+       --- date -d "2016-08-23" -- its convirting string
+       --- TZ='Australia/Melbourne' date  -- its convirting austrliya time zone
+       --- date +%s --- its convirting epoch time
+       --- date -d @epochid --- its convirting date string
+       --- date -r filename --- its display the last modification time
+       --- date --set="20200607 8:15" --- its convirting date string
+----"sleep" sleep is certain time after print the message
+     --- pwd&& sleep 2 && ls --- its print the 2s between time
+----"time"  it show the certain time
+     --- time ls --- its showing ls
+     --- /usr/bin/time -o time.txt pwd  --- its store the output in time.txt
+     --- /usr/bin/time -v time.txt pwd  --- its show the detailed view
+     
+       ----"df" commmond is used to disk space used in file system.
+             --- df -h --- its showing human readble
+             --- df -T --- its showing including file type also
+             --- df -t filetype --- it showing certain file type only
+             --- df -x filetype --- its exclude the file sytem in only
+             --- df directryname    --- its showing the 
 -----"mount" commond is used to connect extrnal deevicce file system to systems file system
 
 LINUX NETWORKING COMMONDS:
@@ -205,6 +277,8 @@ LINUX NETWORKING COMMONDS:
           hope you ur well
 -----"ping" commond used to check the connectivitybetween two nods. EX: ping javapoint.com
 -----"host" host commond is usd to display the ip address from the given domain name and vice versa. EX: host javapoint.com 
+---- set -o noclobber -- it not ovirite the present file echo "hello world" > kesav.txt
+---- set +o noclobber -- it over write the prsent file echo "hello world" > kesav.txt
 
 LINUX USERS COMMONDS:
   this tutorila tells how to identify the system users and how to create second account and run the programs 

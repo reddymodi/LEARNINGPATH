@@ -481,6 +481,38 @@ FHS(filesystem hierrarchy standard):
 NON-STANDARD DIRECTORYS:directorys which do not come under standard the FHS ar called non-standard directorys
                         some non-directory fileslike"/cdrom","/run","/lost +found".
 
+LINUX ADVANCE FILE PERMISSIONS: its 5 type of permissions
+                                     1)Inode  2)directoryes 3)hardlink 4)softlink 5)remove link
+             ---- "inode" --- its represemst the filng system its show uis,gid,uname,gname,permiisions in Inode link
+                    ex: df -i or ls -li filname 
+             ---- "directoris link" --- its represent the directorees its store the files and file system. int directory two files                         defaultly saved there are (.) and (..). dot filr represent to itself and dotdot(..) its represent to parent directory.
+             ---- "hatrd link" ln will be used to creaet the hard links
+                  ex: ln - directoryname diretory_xyz
+                      find / -inum inodenumber 2> /dev/null ---- its find the files
+             ---- "soft link" its called a symolic links also. its represents "ln -s"
+                   ex: ln -s xyz symolic_xyz --- its creating soft link
+             ---- "remove link" its removing the hard links and softlinks
+                 ex: rm hardlink or rm softlink
+  LINUX NETWORKING FILE SYSTEMS: every computer is connected to other computer throug use network internally or extranlly to
+                                  exchange the some information.
+             --- ifconfig : its showing the ipadresses and maping address show thehiding information.
+                 --- ifconfig etho <ipadress> netmask<ipaddress> --- its assigning the ip adreeses
+                 --- ifup etho --- its enble the interface
+                 --- ifdown etho -- its down the interface
+             --- ip : its showingthe ip address ans intreface and links
+                 --- ip a or ip addr or ip addr show: its shows the ip adresses
+                 --- ip -4 addr --- its howing ipv4 adress
+                 --- ip -6 addr --- its showing ipv6 adress
+                 --- ip addr show dep interfacename --- its showing singke interfaces
+                 --- ip addr add ipadress dev interfacename -- it add the ip address to interface
+                 --- ip addre del ipaddres dev inteerfacename -- its delete the ipdaaress
+                 --- ip link show  --- its showing interface links
+                 --- ip link set interfacename down --- its hutdiwn the interface
+                 --- ip link set interface up --- its start the interface
+                 
+  
+         
+
 LINUX FILTERS: linux filters accept input data from stdin and produce output from stdout.it transform plian text to meanigful way.
                and can be used pipe with hiegher operations.
      

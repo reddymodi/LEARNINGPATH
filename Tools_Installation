@@ -1,0 +1,31 @@
+awscli installation ----- curl "https://awscli.amazonaws.com/awscli-exe-linux-x86_64.zip" -o "awscliv2.zip"
+                          unzip awscliv2.zip
+
+terraform  ---- sudo yum install -y yum-utils
+                sudo yum-config-manager --add-repo https://rpm.releases.hashicorp.com/AmazonLinux/hashicorp.repo
+                sudo yum -y install terraform
+
+kubeadm install
+
+https://docs.nginx.com/nginx-ingress-controller/installation/inastallatio-with-manifests/
+
+ mkdir -p $HOME/.kube
+  sudo cp -i /etc/kubernetes/admin.conf $HOME/.kube/config
+  sudo chown $(id -u):$(id -g) $HOME/.kube/config
+
+Alternatively, if you are the root user, you can run:
+
+  export KUBECONFIG=/etc/kubernetes/admin.conf
+
+You should now deploy a pod network to the cluster.
+Run "kubectl apply -f [podnetwork].yaml" with one of the options listed at:
+  https://kubernetes.io/docs/concepts/cluster-administration/addons/
+
+Then you can join any number of worker nodes by running the following on each as root:
+
+kubeadm join 10.182.0.3:6443 --token qe91n5.cdf4lvakjxh2305o \
+        --discovery-token-ca-cert-hash sha256:cfcea0200f0946eea5e367d2e541b273624de68747e5d43a481081438da13d2c 
+
+withCredentials([usernamePassword(credentialsId: 'mycompany-github-creds', passwordVariable: 'pass', usernameVariable: 'user')]) {
+    // the code here can access $pass and $user
+}
